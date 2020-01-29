@@ -9,7 +9,7 @@
 
 # airplanes = Airplane.create([{ name: '737'}, { row:5 }, { column:6 }, ])
 
-puts "Creating seed data"
+puts "Creating seed data "
 puts "Creating Planes Data"
 Airplane.destroy_all
 
