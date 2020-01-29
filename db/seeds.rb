@@ -11,20 +11,20 @@
 
 puts "Creating seed data "
 puts "Creating Planes Data"
-Plane.destroy_all
+Airplane.destroy_all
 
-plane1 = Plane.create! name:'747', rows:5, columns:6
+plane1 = Airplane.create! name:'747', row:5, column:6
 
-plane2 = Plane.create! name:'A380', rows:4, columns:7
+plane2 = Airplane.create! name:'A380', row:4, column:7
 
-plane3 = Plane.create! name:'737', rows:3, columns:8
+plane3 = Airplane.create! name:'737', row:3, column:8
 
-plane4 = Plane.create! name:'800', rows:4, columns:6
+plane4 = Airplane.create! name:'800', row:4, column:6
 
-plane5 = Plane.create! name:'Concord', rows:7, columns:4
+plane5 = Airplane.create! name:'Concord', row:7, column:4
 
 
-puts "Created #{Plane.count} planes"
+puts "Created #{Airplane.count} planes"
 
 
 Reservation.destroy_all
