@@ -13,12 +13,20 @@
 
   <div class="field">
     <%= form.label :flight_id %>
-    <%= form.number_field :flight_id %>
+    <select name="reservation[flight_id]">
+      <% Flight.all.each do |flight| %>
+        <option value="<%= flight.id %>">From <%= flight.origin %> to <%= flight.destination %> on <%= flight.date %>|<%= flight.flightnum %></option>
+      <% end %>
+    </select>
   </div>
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <select name="reservation[user_id]">
+      <% User.all.each do |user| %>
+        <option value="<%= user.id %>"><%= user.name %></option>
+      <% end %>
+    </select>
   </div>
 
 

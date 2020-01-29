@@ -1,13 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Flight:</strong>
-  <%= @reservation.flight_id %>
+  <strong>Flight From:</strong>
+  <%= @reservation.flight.origin%>
+</p>
+<p>
+  <strong>Flight To:</strong>
+  <%= @reservation.flight.destination%>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @reservation.flight.date%>
+</p>
+<p>
+  <strong>Airplane:</strong>
+  <%= @reservation.flight.airplane.name%>
+</p>
+<p>
+  <strong>Flight Number:</strong>
+  <%= @reservation.flight.flightnum%>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @reservation.user_id %>
+  <%= @reservation.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |

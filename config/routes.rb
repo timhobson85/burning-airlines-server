@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'flights#index'
+  root :to => 'flights#index'
 
   # get 'airplanes' =>
 
@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   resources :flights
   resources :reservations
   resources :airplanes
-  resources :data
 end
