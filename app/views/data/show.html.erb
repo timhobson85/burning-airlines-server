@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @datum.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @datum.destination %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @datum.date %>
+</p>
+
+<p>
+  <strong>Flightnum:</strong>
+  <%= @datum.flightnum %>
+</p>
+
+<p>
+  <strong>Plane:</strong>
+  <%= @datum.plane %>
+</p>
+
+<%= link_to 'Edit', edit_datum_path(@datum) %> |
+<%= link_to 'Back', data_path %>

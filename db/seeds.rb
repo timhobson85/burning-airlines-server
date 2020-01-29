@@ -79,3 +79,20 @@ flight5 = Flight.create! origin: "WA", destination: "ACT", date: "2020-03-02"
 
 
 puts "Created #{Flight.count} Flights"
+
+puts "Creating Data Data"
+
+Datum.destroy_all
+
+
+data1 = Datum.create! origin: "NSW", destination: "QLD", date: "2020-02-20", flightnum: 111, plane: 'Condor'
+
+data2 = Datum.create! origin: "ACT", destination: "WA", date: "2020-02-24", flightnum: 123, plane: 'Big Mike'
+
+data3 = Datum.create! origin: "QLD", destination: "TAS", date: "2020-02-26", flightnum: 222, plane: 'Abandoner'
+
+data4 = Datum.create! origin: "TAS", destination: "SYD", date: "2020-02-31", flightnum: 41, plane: 'Omega Pink'
+
+data5 = Datum.create! origin: "WA", destination: "ACT", date: "2020-03-02", flightnum: 15, plane: 'Twelve'
+
+puts "Created #{Datum.count} datum"
