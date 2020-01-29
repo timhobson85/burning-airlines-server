@@ -10,6 +10,7 @@ class FlightsController < ApplicationController
   # GET /flights/1
   # GET /flights/1.json
   def show
+    @flight = Flight.find params[:id]
   end
 
   # GET /flights/new
@@ -19,16 +20,22 @@ class FlightsController < ApplicationController
 
   # GET /flights/1/edit
   def edit
+    @flight = Flight.find params[:id]
   end
 
   # POST /flights
   # POST /flights.json
   def create
+
+    # Flight.create flight_params
+    #
+    # redirect_to flights_path
+
     @flight = Flight.new(flight_params)
 
     respond_to do |format|
       if @flight.save
-        format.html { redirect_to @flight, notice: 'Flight was successfully created.' }
+        format.html { redirect_to flights_path, notice: 'Flight was successfully created.' }
         format.json { render :show, status: :created, location: @flight }
       else
         format.html { render :new }
@@ -42,7 +49,7 @@ class FlightsController < ApplicationController
   def update
     respond_to do |format|
       if @flight.update(flight_params)
-        format.html { redirect_to @flight, notice: 'Flight was successfully updated.' }
+        format.html { redirect_to flight_path(@flight.id), notice: 'Flight was successfully updated.' }
         format.json { render :show, status: :ok, location: @flight }
       else
         format.html { render :edit }
@@ -69,6 +76,6 @@ class FlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
-      params.require(:flight).permit(:origin, :destination, :date, :number)
+      params.require(:flight).permit(:origin, :destination, :date, :flightnum, :airplane_id)
     end
 end

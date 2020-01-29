@@ -67,32 +67,15 @@ Flight.destroy_all
 # binding.pry
 
 
-flight1 = Flight.create! origin: "NSW", destination: "QLD", date: "2020-02-20", flightnum: 'Q337'
+flight1 = Flight.create! origin: "NSW", destination: "QLD", date: "2020-02-20", flightnum: 'Q337', airplane_id: plane1.id
 
-flight2 = Flight.create! origin: "ACT", destination: "WA", date: "2020-02-24", flightnum: 'Q456'
+flight2 = Flight.create! origin: "ACT", destination: "WA", date: "2020-02-24", flightnum: 'Q456', airplane_id: plane1.id
 
-flight3 = Flight.create! origin: "QLD", destination: "TAS", date: "2020-02-26", flightnum: 'JS666'
+flight3 = Flight.create! origin: "QLD", destination: "TAS", date: "2020-02-26", flightnum: 'JS666', airplane_id: plane2.id
 
-flight4 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-02-31", flightnum: 'V356'
+flight4 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-02-31", flightnum: 'V356', airplane_id: plane4.id
 
-flight5 = Flight.create! origin: "WA", destination: "ACT", date: "2020-03-02", flightnum: 'Q123'
+flight5 = Flight.create! origin: "WA", destination: "ACT", date: "2020-03-02", flightnum: 'Q123', airplane_id: plane3.id
 
 
 puts "Created #{Flight.count} Flights"
-
-puts "Creating Data Data"
-
-Datum.destroy_all
-
-
-data1 = Datum.create! origin: "NSW", destination: "QLD", date: "2020-02-20", flightnum: 111, plane: 'Condor'
-
-data2 = Datum.create! origin: "ACT", destination: "WA", date: "2020-02-24", flightnum: 123, plane: 'Big Mike'
-
-data3 = Datum.create! origin: "QLD", destination: "TAS", date: "2020-02-26", flightnum: 222, plane: 'Abandoner'
-
-data4 = Datum.create! origin: "TAS", destination: "SYD", date: "2020-02-31", flightnum: 41, plane: 'Omega Pink'
-
-data5 = Datum.create! origin: "WA", destination: "ACT", date: "2020-03-02", flightnum: 15, plane: 'Twelve'
-
-puts "Created #{Datum.count} datum"

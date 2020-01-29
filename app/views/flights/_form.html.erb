@@ -27,8 +27,17 @@
   </div>
 
   <div class="field">
-    <%= form.label :number %>
-    <%= form.number_field :number %>
+    <%= form.label :flightnum %>
+    <%= form.text_field :flightnum %>
+  </div>
+
+  <div class="field">
+    <%= form.label :airplane %>
+    <select name="flight[airplane_id]">
+      <% Airplane.all.each do |airplane| %>
+        <option value="<%= airplane.id %>"><%= airplane.name %></option>
+      <% end %>
+    </select>
   </div>
 
   <div class="actions">

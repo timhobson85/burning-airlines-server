@@ -16,8 +16,13 @@
 </p>
 
 <p>
-  <strong>Number:</strong>
-  <%= @flight.number %>
+  <strong>Flight Number:</strong>
+  <%= @flight.flightnum %>
+</p>
+
+<p>
+  <strong>Airplane:</strong>
+  <%= @flight.airplane.name%>
 </p>
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
