@@ -11,9 +11,10 @@ json.array! @flights do |flight|
   json.flightnum flight.flightnum
   json.date flight.date
 
+
   json.airplane do
     json.partial! 'airplanes/airplane', airplane: flight.airplane
   end
 
-  json.created_at flight.created_at
+  # json.created_at flight.created_at
 end
