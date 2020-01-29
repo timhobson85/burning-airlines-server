@@ -1,34 +1,48 @@
 require 'test_helper'
 
 class ReservationsControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get reservations_new_url
-    assert_response :success
-  end
-
-  test "should get create" do
-    get reservations_create_url
-    assert_response :success
+  setup do
+    @reservation = reservations(:one)
   end
 
   test "should get index" do
-    get reservations_index_url
+    get reservations_url
     assert_response :success
   end
 
-  test "should get show" do
-    get reservations_show_url
+  test "should get new" do
+    get new_reservation_url
     assert_response :success
   end
 
-  test "should get update" do
-    get reservations_update_url
+  test "should create reservation" do
+    assert_difference('Reservation.count') do
+      post reservations_url, params: { reservation: { flight_id: @reservation.flight_id, user_id: @reservation.user_id } }
+    end
+
+    assert_redirected_to reservation_url(Reservation.last)
+  end
+
+  test "should show reservation" do
+    get reservation_url(@reservation)
     assert_response :success
   end
 
-  test "should get destroy" do
-    get reservations_destroy_url
+  test "should get edit" do
+    get edit_reservation_url(@reservation)
     assert_response :success
   end
 
+  test "should update reservation" do
+    patch reservation_url(@reservation), params: { reservation: { flight_id: @reservation.flight_id, user_id: @reservation.user_id } }
+    assert_redirected_to reservation_url(@reservation)
+  end
+
+  test "should destroy reservation" do
+    assert_difference('Reservation.count', -1) do
+      delete reservation_url(@reservation)
+    end
+
+    assert_redirected_to reservations_url
+  end
 end

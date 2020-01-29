@@ -3,9 +3,9 @@
 one:
   name: MyText
   row: 1
-  column: 1
+  colomn: 1
 
 two:
   name: MyText
   row: 1
-  column: 1
+  colomn: 1
