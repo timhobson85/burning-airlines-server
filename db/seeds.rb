@@ -27,9 +27,9 @@ plane5 = Airplane.create! name:'Concord', row:7, column:4
 puts "Created #{Airplane.count} planes"
 
 
-# Reservation.destroy_all
+Reservation.destroy_all
 
-# puts "Cleared Reservation List"
+puts "Cleared Reservation List"
 
 User.destroy_all
 
