@@ -9,8 +9,8 @@
 
 # airplanes = Airplane.create([{ name: '737'}, { row:5 }, { column:6 }, ])
 
-puts " Creating seed data "
-puts " Creating Planes Data"
+puts "Creating seed data "
+puts "Creating Planes Data"
 Plane.destroy_all
 
 plane1 = Plane.create! name:'747', rows:5, columns:6
@@ -24,12 +24,18 @@ plane4 = Plane.create! name:'800', rows:4, columns:6
 plane5 = Plane.create! name:'Concord', rows:7, columns:4
 
 
-puts " Created #{Plane.count} planes"
+puts "Created #{Plane.count} planes"
 
 
 Reservation.destroy_all
 
-puts " Creating Users Data"
+puts "Cleared Reservation List"
+
+User.destroy_all
+
+puts "Cleared User List"
+
+puts "Creating Users Data"
 
 u1 = User.create! name: 'Tim'
 u2 = User.create! name: 'Yanni'
@@ -52,3 +58,5 @@ u17 = User.create! name: 'Davey'
 u18 = User.create! name: 'Alex'
 u19 = User.create! name: 'Nina'
 u20 = User.create! name: 'Jasmin'
+
+puts "Created #{User.count} Users"
