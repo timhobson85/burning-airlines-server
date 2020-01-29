@@ -13,15 +13,15 @@ puts "Creating seed data "
 puts "Creating Planes Data"
 Airplane.destroy_all
 
-plane1 = Airplane.create! name:'B747', row:5, column:6
+plane1 = Airplane.create! name:'B747', rows:5, columns:6
 
-plane2 = Airplane.create! name:'A380', row:4, column:7
+plane2 = Airplane.create! name:'A380', rows:4, columns:7
 
-plane3 = Airplane.create! name:'B737', row:3, column:8
+plane3 = Airplane.create! name:'B737', rows:3, columns:8
 
-plane4 = Airplane.create! name:'800', row:4, column:6
+plane4 = Airplane.create! name:'800', rows:4, columns:6
 
-plane5 = Airplane.create! name:'Concord', row:7, column:4
+plane5 = Airplane.create! name:'Concord', rows:7, columns:4
 
 
 puts "Created #{Airplane.count} planes"
