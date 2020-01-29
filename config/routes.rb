@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   resources :reservations
   resources :airplanes
   resources :data
-  # root :to
 end

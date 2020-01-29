@@ -67,15 +67,15 @@ Flight.destroy_all
 # binding.pry
 
 
-flight1 = Flight.create! origin: "NSW", destination: "QLD", date: "2020-02-20"
+flight1 = Flight.create! origin: "NSW", destination: "QLD", date: "2020-02-20", flightnum: 'Q337'
 
-flight2 = Flight.create! origin: "ACT", destination: "WA", date: "2020-02-24"
+flight2 = Flight.create! origin: "ACT", destination: "WA", date: "2020-02-24", flightnum: 'Q456'
 
-flight3 = Flight.create! origin: "QLD", destination: "TAS", date: "2020-02-26"
+flight3 = Flight.create! origin: "QLD", destination: "TAS", date: "2020-02-26", flightnum: 'JS666'
 
-flight4 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-02-31"
+flight4 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-02-31", flightnum: 'V356'
 
-flight5 = Flight.create! origin: "WA", destination: "ACT", date: "2020-03-02"
+flight5 = Flight.create! origin: "WA", destination: "ACT", date: "2020-03-02", flightnum: 'Q123'
 
 
 puts "Created #{Flight.count} Flights"
