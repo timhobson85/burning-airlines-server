@@ -1,34 +1,48 @@
 require 'test_helper'
 
 class FlightsControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get flights_new_url
-    assert_response :success
-  end
-
-  test "should get create" do
-    get flights_create_url
-    assert_response :success
+  setup do
+    @flight = flights(:one)
   end
 
   test "should get index" do
-    get flights_index_url
+    get flights_url
     assert_response :success
   end
 
-  test "should get show" do
-    get flights_show_url
+  test "should get new" do
+    get new_flight_url
     assert_response :success
   end
 
-  test "should get update" do
-    get flights_update_url
+  test "should create flight" do
+    assert_difference('Flight.count') do
+      post flights_url, params: { flight: { date: @flight.date, destination: @flight.destination, number: @flight.number, origin: @flight.origin } }
+    end
+
+    assert_redirected_to flight_url(Flight.last)
+  end
+
+  test "should show flight" do
+    get flight_url(@flight)
     assert_response :success
   end
 
-  test "should get destroy" do
-    get flights_destroy_url
+  test "should get edit" do
+    get edit_flight_url(@flight)
     assert_response :success
   end
 
+  test "should update flight" do
+    patch flight_url(@flight), params: { flight: { date: @flight.date, destination: @flight.destination, number: @flight.number, origin: @flight.origin } }
+    assert_redirected_to flight_url(@flight)
+  end
+
+  test "should destroy flight" do
+    assert_difference('Flight.count', -1) do
+      delete flight_url(@flight)
+    end
+
+    assert_redirected_to flights_url
+  end
 end

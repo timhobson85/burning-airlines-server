@@ -4,10 +4,10 @@ one:
   origin: MyString
   destination: MyString
   date: MyString
-  plane: MyString
+  number: 1
 
 two:
   origin: MyString
   destination: MyString
   date: MyString
-  plane: MyString
+  number: 1

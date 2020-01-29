@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # root :to
+  resources :users
+  resources :flights
+  resources :reservations
+  resources :airplanes
+  resources :data
 end

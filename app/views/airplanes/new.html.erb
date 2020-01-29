@@ -1,2 +1,5 @@
-<h1>Airplanes#new</h1>
-<p>Find me in app/views/airplanes/new.html.erb</p>
+<h1>New Airplane</h1>
+
+<%= render 'form', airplane: @airplane %>
+
+<%= link_to 'Back', airplanes_path %>
