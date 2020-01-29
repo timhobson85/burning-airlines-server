@@ -1,0 +1,18 @@
+<%= form_for @flight do |f| %>
+
+  <%= f.label :origin%>
+  <%= f.text_field :origin %>
+  <br>
+
+  <%= f.label :destination%>
+  <%= f.text_field :destination %>
+  <br>
+
+  <%= f.label :date%>
+  <%= f.date_field :date %>
+  <br>
+
+  <%= f.label :plane%>
+  <%= f.text_field :plane %>
+  <br>
+<% end %>
