@@ -13,11 +13,11 @@ puts "Creating seed data "
 puts "Creating Planes Data"
 Airplane.destroy_all
 
-plane1 = Airplane.create! name:'747', row:5, column:6
+plane1 = Airplane.create! name:'B747', row:5, column:6
 
 plane2 = Airplane.create! name:'A380', row:4, column:7
 
-plane3 = Airplane.create! name:'737', row:3, column:8
+plane3 = Airplane.create! name:'B737', row:3, column:8
 
 plane4 = Airplane.create! name:'800', row:4, column:6
 
@@ -60,3 +60,20 @@ u19 = User.create! name: 'Nina'
 u20 = User.create! name: 'Jasmin'
 
 puts "Created #{User.count} Users"
+
+puts "Creating Flight Data"
+
+Flight.destroy_all
+
+flight1 = Flight.create! origin: 'NSW' destination: 'QLD' date: '20-02-2020'
+plane: 'B737' airplane_id: ''
+flight2 = Flight.create! origin: 'ACT' destination: 'WA' date: '24-02-2020'
+plane: 'A380' airplane_id: ''
+flight3 = Flight.create! origin: 'QLD' destination: 'TAS' date: '26-02-2020'
+plane: '800' airplane_id: ''
+flight4 = Flight.create! origin: 'TAS' destination: 'SYD' date: '31-02-2020'
+plane: 'Concord' airplane_id: ''
+flight5 = Flight.create! origin: 'WA' destination: 'ACT' date: '02-03-2020'
+plane: 'B747' airplane_id: ''
+
+puts "Created #{Flight.count} Users"
