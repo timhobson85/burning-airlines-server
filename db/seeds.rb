@@ -9,7 +9,7 @@
 
 # airplanes = Airplane.create([{ name: '737'}, { row:5 }, { column:6 }, ])
 
-puts "Creating seed data "
+puts "Creating seed data"
 puts "Creating Planes Data"
 Airplane.destroy_all
 
@@ -65,15 +65,15 @@ puts "Creating Flight Data"
 
 Flight.destroy_all
 
-flight1 = Flight.create! origin: 'NSW' destination: 'QLD' date: '20-02-2020'
-plane: 'B737' airplane_id: ''
-flight2 = Flight.create! origin: 'ACT' destination: 'WA' date: '24-02-2020'
-plane: 'A380' airplane_id: ''
-flight3 = Flight.create! origin: 'QLD' destination: 'TAS' date: '26-02-2020'
-plane: '800' airplane_id: ''
-flight4 = Flight.create! origin: 'TAS' destination: 'SYD' date: '31-02-2020'
-plane: 'Concord' airplane_id: ''
-flight5 = Flight.create! origin: 'WA' destination: 'ACT' date: '02-03-2020'
-plane: 'B747' airplane_id: ''
+flight1 = Flight.create! origin: "NSW" destination: "QLD" date: "20-02-2020"
+
+flight2 = Flight.create! origin: "ACT" destination: "WA" date: "24-02-2020"
+
+flight3 = Flight.create! origin: "QLD" destination: "TAS" date: "26-02-2020"
+
+flight4 = Flight.create! origin: "TAS" destination: "SYD" date: "31-02-2020"
+
+flight5 = Flight.create! origin: "WA" destination: "ACT" date: "02-03-2020"
+
 
 puts "Created #{Flight.count} Users"
