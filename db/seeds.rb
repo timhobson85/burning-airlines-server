@@ -27,9 +27,6 @@ plane5 = Airplane.create! name:'Concord', rows:5, columns:4
 puts "Created #{Airplane.count} planes"
 
 
-Reservation.destroy_all
-
-puts "Cleared Reservation List"
 
 User.destroy_all
 
@@ -77,7 +74,17 @@ flight4 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-02-31", 
 
 flight5 = Flight.create! origin: "WA", destination: "ACT", date: "2020-03-02", flightnum: 'Q123', airplane_id: plane3.id
 
-flight4 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-04-22", flightnum: 'T502', airplane_id: plane5.id
+flight6 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-04-22", flightnum: 'T502', airplane_id: plane5.id
 
 
 puts "Created #{Flight.count} Flights"
+
+
+Reservation.destroy_all
+
+puts "Cleared Reservation List"
+
+r1 = Reservation.create! row:5, column: 4, flight_id: flight6.id, user_id: u1.id
+
+
+puts "Created #{Reservation.count} planes"
