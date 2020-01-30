@@ -26,5 +26,15 @@
   <%= @reservation.user.name %>
 </p>
 
+<p>
+  <strong>Row:</strong>
+  <%= @reservation.row %>
+</p>
+
+<p>
+  <strong>Column:</strong>
+  <%= @reservation.column %>
+</p>
+
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |
 <%= link_to 'Back', reservations_path %>
