@@ -77,5 +77,7 @@ flight4 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-02-31", 
 
 flight5 = Flight.create! origin: "WA", destination: "ACT", date: "2020-03-02", flightnum: 'Q123', airplane_id: plane3.id
 
+flight4 = Flight.create! origin: "TAS", destination: "SYD", date: "2020-04-22", flightnum: 'T502', airplane_id: plane5.id
+
 
 puts "Created #{Flight.count} Flights"
