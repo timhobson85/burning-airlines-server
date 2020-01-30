@@ -22,7 +22,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <select class="reservation_user_id">
+    <select name="reservation[user_id]">
       <% User.all.each do |user| %>
         <option value="<%= user.id %>"><%= user.name %></option>
       <% end %>
@@ -30,22 +30,22 @@
   </div>
 
   <div class="field">
-    <%= form.label :rows %>
-    <select id="rows" class="reservation_flight_airplane_rows">
+    <%= form.label :row %>
+    <select name="reservation[row]">
       <% Flight.all.each do |flight| %>
         <% (1..flight.airplane.rows).each do |i| %>
-          <option value="<%=  flight.airplane.rows  %>"><%= i %></option>
+          <option value="<%= i %>"><%= i %></option>
         <% end %>
       <% end %>
     </select>
   </div>
 
   <div class="field">
-    <%= form.label :columns %>
-    <select id="columns" name="reservation[flight_airplane_columns]">
+    <%= form.label :column %>
+    <select name="reservation[column]">
       <% Flight.all.each do |flight| %>
         <% (1..flight.airplane.columns).each do |i| %>
-          <option value="<%=  flight.airplane.columns  %>"><%= i %></option>
+          <option value="<%= i  %>"><%= i %></option>
         <% end %>
       <% end %>
     </select>
