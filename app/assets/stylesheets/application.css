@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
+
+ body {
+   text-align: center;
+   font-family: 'Sigmar One', cursive;
+   font-size: 35px;
+ }
+
+ table {
+   margin: auto;
+ }
