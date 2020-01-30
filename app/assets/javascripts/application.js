@@ -11,4 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require_tree .
+= require jquery
+= require_tree .
+
+// $(document).ready(function() {
+//   $(".reservation_flight_airplane_rows").on('change', function(){
+//     $ajax({
+//       url: "populate_other_list",
+//       type: "GET",
+//       data: {: $(this).val()},
+//     })
+//   });
