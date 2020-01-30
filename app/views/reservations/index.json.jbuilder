@@ -6,8 +6,8 @@ json.array! @reservations do |reservation|
   json.column reservation.column
   json.flight_id reservation.flight_id
 
-  # json.airplane do
-  #   json.partial! 'airplanes/airplane', airplane: reservation.airplane
-  # end
+  json.user do
+    json.partial! 'users/user', user: reservation.user
+  end
 
 end
