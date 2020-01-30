@@ -84,7 +84,17 @@ Reservation.destroy_all
 
 puts "Cleared Reservation List"
 
-r1 = Reservation.create! row:5, column: 4, flight_id: flight6.id, user_id: u1.id
+r1 = Reservation.create! row:1, column: 4, flight_id: flight6.id, user_id: u1.id
+r2 = Reservation.create! row:1, column: 3, flight_id: flight6.id, user_id: u3.id
+r3 = Reservation.create! row:2, column: 4, flight_id: flight6.id, user_id: u4.id
+r4 = Reservation.create! row:2, column: 2, flight_id: flight6.id, user_id: u5.id
+r5 = Reservation.create! row:3, column: 1, flight_id: flight6.id, user_id: u7.id
+r6 = Reservation.create! row:3, column: 2, flight_id: flight6.id, user_id: u8.id
+r7 = Reservation.create! row:3, column: 3, flight_id: flight6.id, user_id: u9.id
+r8 = Reservation.create! row:3, column: 4, flight_id: flight6.id, user_id: u10.id
+r9 = Reservation.create! row:5, column: 1, flight_id: flight6.id, user_id: u11.id
+r10 = Reservation.create! row:5, column: 4, flight_id: flight6.id, user_id: u15.id
 
 
-puts "Created #{Reservation.count} planes"
+
+puts "Created #{Reservation.count} reservations"
