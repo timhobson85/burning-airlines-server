@@ -17,7 +17,7 @@ plane1 = Airplane.create! name:'B747', rows:5, columns:4
 
 plane2 = Airplane.create! name:'A380', rows:4, columns:4
 
-plane3 = Airplane.create! name:'B737', rows:3, columns:6
+plane3 = Airplane.create! name:'B737', rows:3, columns:2
 
 plane4 = Airplane.create! name:'800', rows:4, columns:2
 
