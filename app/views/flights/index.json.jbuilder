@@ -16,5 +16,9 @@ json.array! @flights do |flight|
     json.partial! 'airplanes/airplane', airplane: flight.airplane
   end
 
+  json.reservation do
+    json.partial! 'reservations/reservation', reservation: flight.reservations
+  end
+
   # json.created_at flight.created_at
 end
