@@ -95,6 +95,35 @@ r8 = Reservation.create! row:3, column: 4, flight_id: flight6.id, user_id: u10.i
 r9 = Reservation.create! row:5, column: 1, flight_id: flight6.id, user_id: u11.id
 r10 = Reservation.create! row:5, column: 4, flight_id: flight6.id, user_id: u15.id
 
+r11 = Reservation.create! row:3, column: 1, flight_id: flight5.id, user_id: u15.id
+r12 = Reservation.create! row:3, column: 2, flight_id: flight5.id, user_id: u13.id
+r13 = Reservation.create! row:2, column: 1, flight_id: flight5.id, user_id: u11.id
+r14 = Reservation.create! row:1, column: 1, flight_id: flight5.id, user_id: u16.id
+
+r15 = Reservation.create! row:4, column: 2, flight_id: flight4.id, user_id: u17.id
+r16 = Reservation.create! row:3, column: 2, flight_id: flight4.id, user_id: u18.id
+r17 = Reservation.create! row:1, column: 2, flight_id: flight4.id, user_id: u19.id
+r18 = Reservation.create! row:3, column: 1, flight_id: flight4.id, user_id: u20.id
+r19 = Reservation.create! row:1, column: 1, flight_id: flight4.id, user_id: u11.id
+
+r20 = Reservation.create! row:4, column: 3, flight_id: flight3.id, user_id: u13.id
+r21 = Reservation.create! row:1, column: 2, flight_id: flight3.id, user_id: u10.id
+r22 = Reservation.create! row:3, column: 1, flight_id: flight3.id, user_id: u5.id
+r23 = Reservation.create! row:2, column: 4, flight_id: flight3.id, user_id: u6.id
+r24 = Reservation.create! row:1, column: 3, flight_id: flight3.id, user_id: u7.id
+
+r25 = Reservation.create! row:1, column: 5, flight_id: flight2.id, user_id: u1.id
+r26 = Reservation.create! row:2, column: 4, flight_id: flight2.id, user_id: u2.id
+r27 = Reservation.create! row:3, column: 3, flight_id: flight2.id, user_id: u3.id
+r28 = Reservation.create! row:4, column: 2, flight_id: flight2.id, user_id: u5.id
+r29 = Reservation.create! row:5, column: 1, flight_id: flight2.id, user_id: u6.id
+
+r30 = Reservation.create! row:1, column: 1, flight_id: flight1.id, user_id: u8.id
+r31 = Reservation.create! row:2, column: 2, flight_id: flight1.id, user_id: u9.id
+r32 = Reservation.create! row:3, column: 3, flight_id: flight1.id, user_id: u10.id
+r33 = Reservation.create! row:4, column: 4, flight_id: flight1.id, user_id: u11.id
+r34 = Reservation.create! row:5, column: 5, flight_id: flight1.id, user_id: u14.id
+
 
 
 puts "Created #{Reservation.count} reservations"
